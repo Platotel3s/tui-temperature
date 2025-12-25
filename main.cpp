@@ -24,11 +24,9 @@ char getch() {
   tcsetattr(0, TCSADRAIN, &old);
   return buf;
 }
-
 void moveCursor(int row, int col) {
   cout << "\033[" << row << ";" << col << "H";
 }
-
 void clearLine() {
   cout << "\033[K";
 }
