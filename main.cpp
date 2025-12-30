@@ -3,7 +3,6 @@
 #include <termios.h>
 #include <unistd.h>
 #include <sys/ioctl.h>
-
 using namespace std;
 
 #define CLR_RESET  "\033[0m"
@@ -46,9 +45,7 @@ const string menuList[] = {
   "Reamur -> Kelvin",
   "Quit"
 };
-
 const int menuCount = sizeof(menuList) / sizeof(menuList[0]);
-
 int termWidth() {
   struct winsize w;
   ioctl(STDOUT_FILENO, TIOCGWINSZ, &w);
